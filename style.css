@@ -1,0 +1,243 @@
+body{
+    background: linear-gradient(#54abd7,#25a1c5, #275b86);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+main{
+    width: 30rem;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    flex-direction: column;
+}
+.spong_body{
+    width: 15rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem 1rem 0.2rem 0.2rem;
+}
+.face{
+    background-color: yellow;
+    height: 4rem;
+    flex: 1;
+    z-index: 7;
+    border-radius: 1rem 1rem 0.2rem 0.2rem;
+    overflow: hidden;
+
+}
+.clothes{
+    background-color: red;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #111;
+    border-top: none;
+}
+
+.clothes>.shirt{
+    background-color: white;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-bottom: 2px solid #111;
+}
+.shirt::after{
+    content: '';
+    position: absolute;
+    width: 1.4rem;
+    height: 2.5rem;
+    background-color: #fff;
+    left: -1.6rem;
+    margin-top: -1rem;
+    border:2px solid #111;
+    border-radius: 2rem 0 0 0;
+}
+.shirt::before{
+    content: '';
+    position: absolute;
+    width: 1.4rem;
+    height: 2.5rem;
+    background-color: #fff;
+    right: -1.6rem;
+    margin-top: -1rem;
+    border:2px solid #111;
+    border-radius:  0 2rem 0 0;
+}
+.shirt>small{
+    background-color: red;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 0.4rem;
+    border: 2px solid #111;
+
+}
+.shirt>span{
+    border: 3px solid #111;
+    background-color: #fff;
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-top: -2rem;
+    
+}
+.shirt>.top{
+background-color: red;
+width: 1.3rem;
+height: 2.2rem;
+position: absolute;
+margin-top: 1rem;
+border-radius: 1rem 1rem 0 0;
+box-shadow: 0 -0.3rem 0.2rem rgba(0, 0, 0, 0.151);
+border: 2px solid #111;
+
+}
+.shirt>.bottom{
+background-color: red;
+width: 0.9rem;
+height: 0.9rem;
+position: absolute;
+margin-top: 2.8rem;
+transform: rotate(45deg);
+border-right: 2px solid #111;
+border-bottom: 2px solid #111;
+
+
+}
+.shirt>span:nth-child(1){
+    transform: rotate(30deg);
+    margin-right:-0.5rem ;
+}
+.shirt>span:nth-child(5){
+    transform: rotate(-30deg);
+    margin-left: -0.5rem;
+}
+.clothes>.pants{
+    background-color: #B9723E;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+
+}
+.clothes>.pants>.hzam{
+    height: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top:0.5rem ;
+}
+.hzam>li{
+    background-color: #111;
+    width: 1.5rem;
+    height: 0.5rem;
+}
+/* ________________________________________________________________ */
+.legs_container{
+    width: 15rem;
+    /* background-color: violet; */
+}
+.legs_container>.pants{
+    display: flex;
+    justify-content: space-around;
+    /* background-color: crimson; */
+    
+}
+.legs_container>.pants>span{
+    
+    width: 2rem;
+    height: 1rem;
+    background: #9f6135;
+    border-radius: 0.2rem;
+    border: 2px solid #111;
+    margin: -0.1rem;
+    z-index: 1;
+    box-shadow:inset 0 0.2rem 0.1rem rgba(0, 0, 0, 0.125)
+}
+.legs_container>.legs{
+    /* background-color: darkgreen; */
+    display: flex;
+    justify-content: space-around;
+    
+}
+.legs_container>.legs>span{
+    width: 1rem;
+    height: 5rem;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    place-content: end;
+    border: 2px solid #111;
+    z-index: 1;
+    border-radius: 0 0 1rem 1rem;
+
+
+}
+.legs_container>.legs>span>span{
+    height: 3rem;
+    background-color: #fff;
+    padding-top: 0.5rem;
+    border-top:2px solid #111;
+    border-radius: 0 0 1rem 1rem;
+
+}
+.legs_container>.legs>span>span>span:nth-child(1){
+    height: 0.2rem;
+    background-color: blue;
+    display: block; 
+    margin-bottom: 0.5rem;
+}
+.legs_container>.legs>span>span>span:nth-child(2){
+    height: 0.2rem;
+    background-color: red;
+    display: block; 
+}
+.legs_container>.foot{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top:-1rem ;
+}
+.legs_container>.foot>span{
+    height: 3rem;
+    width: 1.8rem;
+    background-color: #111;
+    border-radius: 1rem;
+    position: relative;
+}
+.legs_container>.foot>span>span{
+    height: 2.1rem;
+    width: 2.1rem;
+    background-color: #111;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: -0.2rem;
+    top: 1.2rem;
+}
+.legs_container>.foot>span>span>small{
+    background-color: #e6e1e1;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    place-self: center;
+    margin: 0.6rem;
+    border-radius: 50%;
+    box-shadow:  0 0 0.6rem rgb(255, 254, 254)
+}
+.shos:nth-child(1){
+    transform: rotate(60deg);
+}
+.shos:nth-child(2){
+    transform: rotate(-60deg);
+}
