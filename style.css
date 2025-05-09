@@ -18,7 +18,6 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 1rem;
     flex-direction: column;
 }
 .spong_body{
@@ -39,9 +38,47 @@ main{
     display: flex;
     flex-direction: column;
     border: 2px solid #111;
+    position: relative;
+}
+.face>.hols:nth-child(1){
+    position:absolute;
+    height: 3.5rem;
+    width: 3rem;
+    left: 0.5rem;
+    top:0.5rem ;
+}
+.face>.hols:nth-child(2){
+    position:absolute;
+    height: 3.5rem;
+    width: 3rem;
+    right: 0;
+    bottom:0 ;
+    text-align: center;
+}
+.face>.hols:nth-child(3){
+    position:absolute;
+    height: 3.5rem;
+    width: 3rem;
+    left: 0.5rem;
+    bottom:0.5rem ;
+    transform: rotateY(180deg);
+    transform: rotateX(180deg);
+}
+.face>.hols>span{
+    position: absolute;
+    background-color: rgb(227, 227, 7);
+    box-shadow: inset 0 0 0.4rem rgba(0, 0, 0, 0.151);
+    border-radius: 50%;
+    transform: rotate(20deg);
+    width: 1.3rem;
+    height: 1.5rem;
+}
+.face>.hols>span:nth-child(2){
+    top: 1.9rem;
+    width: 0.8rem;
+    height: 1rem;
 }
 .face>.m{
-    /* background-color: hotpink; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,55 +86,41 @@ main{
 .face>.m>div{
     width: 6.5rem;
     height: 6.5rem;
-    background:linear-gradient( rgb(99, 33, 33) 50%,transparent 50%);
+    background:linear-gradient( #632121 50%,transparent 50%);
     border-radius: 50%;
     overflow: hidden;
     margin-top: 1rem;
     border-top: 2px solid #111;
     position: relative;
 }
-.face>.m>div::before{
+.face>.m>div::before,.face>.m>div::after{
     content: '';
     border: 1rem solid rgb(179, 18, 96);
     border-left:transparent 1rem solid ;
     border-bottom:transparent 1rem solid ;
     transform: rotate(-45deg);
     background-color: transparent;
-    display: block;
     border-radius: 50%;
     position: absolute;
     bottom: 34%;
+}
+.face>.m>div::before{
     left: 1.5rem;
 }
 .face>.m>div::after{
-    content: '';
-    border: 1rem solid rgb(179, 18, 96);
-    border-left:transparent 1rem solid ;
-    border-bottom:transparent 1rem solid ;
-    transform: rotate(-45deg);
-    background-color: transparent;
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 34%;
     right: 1.5rem;
 }
 .face>.m>div>div{
-    /* background-color: green; */
-    height: 2rem;
     display: flex;
     justify-content: center;
     gap: 0.5rem;
 }
 .face>.m>div>div>span{
     background-color: #fff;
-    display: block;
     height: 1.2rem;
     width: 1rem;
 }
 .face>.i{
-    /* background-color: red; */
-    height: 2rem;
     flex: 2.5;
     display: flex;
     justify-content: center;
@@ -150,13 +173,15 @@ main{
     transform: rotate(25deg);
 }
 .face>.i>div>div{
-    background-color: rgb(58, 118, 230);
+    border: 2px solid #111;
+    background: radial-gradient(circle, rgb(108, 174, 235), rgb(25, 94, 255));
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: inset 0 -0.3rem 0.2rem rgba(0, 0, 0, 0.151);
 }
 .face>.i>div>div>span{
     background-color:#111;
@@ -174,11 +199,11 @@ main{
 }
 .face>.m{
     /* background-color: gray; */
+    /* background-image: url('./bg-texture.png'); */
     height: 2rem;
     flex: 2;
 }
 .clothes{
-    /* background-color: red; */
     height: 4.5rem;
     display: flex;
     flex-direction: column;
@@ -197,24 +222,26 @@ main{
 .shirt::after{
     content: '';
     position: absolute;
-    width: 1.2rem;
+    width: 1.1rem;
     height: 2.5rem;
     background-color: #fff;
-    left: -1.4rem;
+    left: -1.3rem;
     margin-top: -2rem;
     border:2px solid #111;
     border-radius: 2rem 0 0 0.5rem ;
+    z-index: 2;
 }
 .shirt::before{
     content: '';
     position: absolute;
-    width: 1.2rem;
+    width: 1.1rem;
     height: 2.5rem;
     background-color: #fff;
-    right: -1.4rem;
+    right: -1.3rem;
     margin-top: -2rem;
     border:2px solid #111;
     border-radius:  0 2rem 0.5rem 0;
+    z-index: 2;
 }
 .shirt>small{
     background-color: red;
@@ -273,51 +300,64 @@ z-index: 4;
     position: relative;
 }
 .clothes>.pants>.hands{
-    width: 0.9rem;
-    /* border: 2px solid #111; */
-    border-top:none;
+    width: 0.8rem;    
     position: absolute;
-    top: -0.8rem;
+    top: -1.1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid;
 }
 .clothes>.pants>.hand1{
-    left: -1rem;
-    border: 2px solid;
+    left: -1.5rem;
     border-radius: 0 0 0 0.9rem ;
+    /* border-right: none; */
+    transform: rotate(8deg);
 }
 .clothes>.pants>.hand2{
-    border: 2px solid;
     border-radius: 0 0 .9rem 0;
-    right: -1rem;
+    /* border-left: none; */
+    right: -1.5rem;
+    transform: rotate(-8deg);
 }
 .clothes>.pants>.hands>.top{
-    height: 4rem;
-
+    height: 4.5rem;
     background-color: yellow;
     width: 100%;
 }
-.clothes>.pants>.hand1>.buttom{
+.clothes>.pants>.hands>.buttom{
     background:linear-gradient( yellow 50%,transparent 50%);
     border-top: 2px solid;
-    height: 2.4rem;
-    width: 2.4rem;
+    height: 2.3rem;
+    width: 2.3rem;
     border-radius: 50%;
-    transform: rotate(-90deg);
-    margin-left: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: -0.5rem;
 }
+.clothes>.pants>.hand1>.buttom{
+    transform: rotate(-90deg);
+    margin-left: 0.6rem;
+}
 .clothes>.pants>.hand2>.buttom{
-    background:linear-gradient( yellow 50%,transparent 50%);
-    border-top: 2px solid;
-    height: 2.4rem;
-    width: 2.4rem;
-    border-radius: 50%;
     transform: rotate(90deg);
-    margin-right: 0.7rem;
-    margin-top: -0.5rem;
-
+    margin-right: 0.6rem;
+}
+.clothes>.pants>.hands>.buttom>span{
+    height: 0.6rem;
+    border-radius: 40%;
+    width: 1.8rem;
+    background-color: yellow;
+    border: 2px solid;
+}
+.clothes>.pants>.hand1>.buttom>span{
+    transform: rotate(-20deg);
+    border-right: none;
+}
+.clothes>.pants>.hand2>.buttom>span{
+    transform: rotate(20deg);
+    border-left: none;
 }
 .clothes>.pants>.hzam{
     height: 2rem;
