@@ -173,12 +173,12 @@ main{
     box-shadow:  0 0 0.5rem rgb(255, 254, 254)
 }
 .face>.m{
-    /* background-color: gray;*/
+    /* background-color: gray; */
     height: 2rem;
     flex: 2;
 }
 .clothes{
-    /* background-color: red;*/
+    /* background-color: red; */
     height: 4.5rem;
     display: flex;
     flex-direction: column;
@@ -197,24 +197,24 @@ main{
 .shirt::after{
     content: '';
     position: absolute;
-    width: 1.4rem;
+    width: 1.2rem;
     height: 2.5rem;
     background-color: #fff;
-    left: -1.6rem;
-    margin-top: -1rem;
+    left: -1.4rem;
+    margin-top: -2rem;
     border:2px solid #111;
-    border-radius: 2rem 0 0 0;
+    border-radius: 2rem 0 0 0.5rem ;
 }
 .shirt::before{
     content: '';
     position: absolute;
-    width: 1.4rem;
+    width: 1.2rem;
     height: 2.5rem;
     background-color: #fff;
-    right: -1.6rem;
-    margin-top: -1rem;
+    right: -1.4rem;
+    margin-top: -2rem;
     border:2px solid #111;
-    border-radius:  0 2rem 0 0;
+    border-radius:  0 2rem 0.5rem 0;
 }
 .shirt>small{
     background-color: red;
@@ -241,6 +241,7 @@ margin-top: 1rem;
 border-radius: 1rem 1rem 0 0;
 box-shadow: 0 -0.3rem 0.2rem rgba(0, 0, 0, 0.151);
 border: 2px solid #111;
+z-index: 3;
 
 }
 .shirt>.bottom{
@@ -252,6 +253,7 @@ margin-top: 2.79rem;
 transform: rotate(45deg);
 border-right: 2px solid #111;
 border-bottom: 2px solid #111;
+z-index: 4;
 
 
 }
@@ -268,6 +270,53 @@ border-bottom: 2px solid #111;
     flex: 2;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+.clothes>.pants>.hands{
+    width: 0.9rem;
+    /* border: 2px solid #111; */
+    border-top:none;
+    position: absolute;
+    top: -0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.clothes>.pants>.hand1{
+    left: -1rem;
+    border: 2px solid;
+    border-radius: 0 0 0 0.9rem ;
+}
+.clothes>.pants>.hand2{
+    border: 2px solid;
+    border-radius: 0 0 .9rem 0;
+    right: -1rem;
+}
+.clothes>.pants>.hands>.top{
+    height: 4rem;
+
+    background-color: yellow;
+    width: 100%;
+}
+.clothes>.pants>.hand1>.buttom{
+    background:linear-gradient( yellow 50%,transparent 50%);
+    border-top: 2px solid;
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+    margin-left: 0.7rem;
+    margin-top: -0.5rem;
+}
+.clothes>.pants>.hand2>.buttom{
+    background:linear-gradient( yellow 50%,transparent 50%);
+    border-top: 2px solid;
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 50%;
+    transform: rotate(90deg);
+    margin-right: 0.7rem;
+    margin-top: -0.5rem;
 
 }
 .clothes>.pants>.hzam{
@@ -284,12 +333,10 @@ border-bottom: 2px solid #111;
 /* ________________________________________________________________ */
 .legs_container{
     width: 15rem;
-    /* background-color: violet; */
 }
 .legs_container>.pants{
     display: flex;
     justify-content: space-around;
-    /* background-color: crimson; */
     
 }
 .legs_container>.pants>span{
